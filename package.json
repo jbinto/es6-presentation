@@ -4,11 +4,9 @@
   "description": "ReactJS Powered Presentation Framework",
   "main": "lib/index.js",
   "scripts": {
-    "clean": "rimraf dist",
-    "build": "NODE_ENV=production webpack --config webpack.config.production.js && cp ./index.html dist/index.html",
-    "rebuild": "npm run clean && npm run build",
+    "build": "NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
-    "deploy": "npm run rebuild && git subtree push --prefix dist origin gh-pages",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
     "start": "NODE_ENV=development node server.js"
   },
   "author": "",
