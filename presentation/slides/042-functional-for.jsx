@@ -26,9 +26,9 @@ const slide = (
       FP JavaScript code looks different - for
     </Heading>
     <List textColor="primary">
-      <ListItem>You'll rarely (never?) see an `for` loop.</ListItem>
-      <ListItem>If you're trying to take an array of N elements, and transform it into a scalar (a single bool, number, or string), use `reduce`.</ListItem>
-      <ListItem>`reduce` is a little tricky at first. Play with it, and it'll become second nature.</ListItem>
+      <ListItem>You'll rarely (never?) see an <code>for</code> loop.</ListItem>
+      <ListItem>If you're trying to take an array of N elements, and transform it into a scalar (a single bool, number, or string), use <code>reduce</code>.</ListItem>
+      <ListItem><code>reduce</code> is a little tricky at first. Play with it, and it'll become second nature.</ListItem>
     </List>
     <CodePane
       lang="jsx"

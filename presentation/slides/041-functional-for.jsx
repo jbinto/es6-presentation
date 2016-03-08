@@ -26,8 +26,8 @@ const slide = (
       FP JavaScript code looks different - for
     </Heading>
     <List textColor="primary">
-      <ListItem>You'll rarely (never?) see an `for` loop.</ListItem>
-      <ListItem>If you're trying to take an array of N elements, and transform it into a different array of N elements, use `map`.</ListItem>
+      <ListItem>You'll rarely (never?) see an <code>for</code> loop.</ListItem>
+      <ListItem>If you're trying to take an array of N elements, and transform it into a different array of N elements, use <code>map</code>.</ListItem>
     </List>
     <CodePane
       lang="jsx"

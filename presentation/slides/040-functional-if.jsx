@@ -26,7 +26,11 @@ const slide = (
       FP JavaScript code looks different - if
     </Heading>
     <List textColor="primary">
-      <ListItem>You'll rarely see an `if` statement. Ternary expressions are preferred, because they can be passed to functions directly as expressions. (You can't put an `if` statement in a function call.)</ListItem>
+      <ListItem>
+        You'll rarely see an <code>if</code> statement. Ternary expressions are preferred,
+        because they can be passed to functions directly as expressions.
+        (You can't put an <code>if</code> statement in a function call.)
+      </ListItem>
     </List>
     <CodePane
       lang="jsx"
