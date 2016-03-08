@@ -26,13 +26,13 @@ const slide = (
       Too big and/or honourable mentions
     </Heading>
     <List>
-      <ListItem>Classes: Shorthand for `prototype` syntax. Does not make JavaScript object oriented.</ListItem>
-      <ListItem>Promises: Alternative to callbacks. Could easily be it's own 2 hour session.</ListItem>
-      <ListItem>Generators: Allows a function to pause its execution via `yield`. Enables sophisticated concurrency patterns beyond promises/callbacks.</ListItem>
-      <ListItem>Symbols: Just like in Ruby. Immutable, useful for object keys. `Symbol("userid")`</ListItem>
-      <ListItem>Object.assign: Copy properties from one object to another. `...` is implemented using this.</ListItem>
-      <ListItem>Object.freeze: Makes an object immutable. Writes/deletes will be disallowed.</ListItem>
-      <ListItem>Object.keys/Object.values: Returns array of just the keys, or just the values, of a JS object.</ListItem>  
+      <ListItem><strong>Classes</strong>: Shorthand for <code>prototype</code> syntax. Does not make JavaScript object oriented.</ListItem>
+      <ListItem><strong>Promises</strong>: Alternative to callbacks. Could easily be it's own 2 hour session.</ListItem>
+      <ListItem><strong>Generators</strong>: Allows a function to pause its execution via <code>yield</code>. Enables sophisticated concurrency patterns beyond promises/callbacks.</ListItem>
+      <ListItem><strong>Symbols</strong>: Just like in Ruby. Immutable, useful for object keys. <code>Symbol("userid")</code></ListItem>
+      <ListItem><strong>Object.assign</strong>: Copy properties from one object to another. <code>...</code> is implemented using this.</ListItem>
+      <ListItem><strong>Object.freeze</strong>: Makes an object immutable. Writes/deletes will be disallowed.</ListItem>
+      <ListItem><strong>Object.keys/Object.values</strong>: Returns array of just the keys, or just the values, of a JS object.</ListItem>  
     </List>
   </Slide>
 
