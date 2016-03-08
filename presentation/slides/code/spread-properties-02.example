@@ -1,0 +1,14 @@
+const user = {
+  username: 'jbinto',
+  hometown: 'toronto',
+  admin: true,
+  super_admin: true,
+}
+
+const userWithoutAdminPrivs = {
+  ...user,
+  admin: false,
+  super_admin: false
+};
+
+console.log(userWithoutAdminPrivs);

@@ -1,0 +1,13 @@
+// ES5
+var operations = {
+  add: function() { },
+  subtract: function() { },
+}
+```
+
+```js
+// ES6+
+const operations = {
+  add() { },
+  subtract() { },
+}

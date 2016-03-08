@@ -1,0 +1,12 @@
+// ES5
+function PersonES5() {
+  this.age = 0;
+  var self = this;
+  setInterval(function() { self.age++; }, 1000);
+}
+
+// ES6+
+function PersonES6() {
+  this.age = 0;
+  setInterval(() => { this.age++; }, 1000);
+}

@@ -21,7 +21,7 @@ import {
 
 
 const slide = (
-  <Slide transition={["zoom"]} bgColor="primary" maxHeight="1000px">
+  <Slide transition={["zoom"]} bgColor="primary" maxHeight={1000}>
     <Heading size={1} fit lineHeight={1} textColor="tertiary">
        const !== immutability
     </Heading>

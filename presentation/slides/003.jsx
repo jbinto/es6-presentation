@@ -26,7 +26,7 @@ const slide = (
        Transpilation
     </Heading>
     <List textColor="secondary">
-      <ListItem>transpile (n): word invented by JavaScript thought leaders; meaning compile</ListItem>
+      <ListItem>transpile (v.): word invented by JavaScript thought leaders; meaning compile</ListItem>
       <ListItem>Browser support is all over the map for most of ES2015, thus the need for a build step</ListItem>
       <ListItem>Not all features can be transpiled. Some* require browser engine changes</ListItem>
       <ListItem>Some features require runtime support via `babel-polyfill`</ListItem>

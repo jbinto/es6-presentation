@@ -1,0 +1,2 @@
+// main.js, in a project with a node_modules directory
+import ReactDOM from 'react-dom';

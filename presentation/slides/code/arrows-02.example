@@ -1,0 +1,8 @@
+// equivalent to:
+// const double = function(x) { return x * 2; }
+const double = x => x * 2;
+console.log(double(4)); // 8;
+
+// multiple arguments requires parens
+const addTwoNumbers = (x, y) => x + y;
+console.log(addTwoNumbers(5, 10));  // 15;

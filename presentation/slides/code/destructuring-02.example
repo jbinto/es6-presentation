@@ -1,0 +1,17 @@
+const getUserInfo = () => ({
+  username: 'jbinto',
+  realname: 'Jesse',
+  token: '24023893289',
+  admin: true,
+});
+
+// equivalent to:
+// const temp = getUserInfo();
+// const username = temp.username;
+// const admin = temp.admin;
+// const authenticationToken = temp.token;
+const { username, admin, token: authenticationToken } = getUserInfo();
+
+console.log(username); // 'jbinto'
+console.log(admin);  // true
+console.log(authenticationToken);  // 24023893289

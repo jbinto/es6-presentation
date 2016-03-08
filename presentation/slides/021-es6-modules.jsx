@@ -23,24 +23,23 @@ import {
 const slide = (
   <Slide transition={["zoom"]} bgColor="primary" maxHeight={1000}>
     <Heading size={1} fit lineHeight={1} textColor="tertiary">
-       Block scoping, aka `let`
+       ES6 modules - default exports & simple imports
     </Heading>
+    <CodePane
+      lang="jsx"
+      source={require("raw!./code/es6-modules-01.example")}
+      margin="20px auto"
+    />
     <List>
-      <ListItem>In other languages (C, Java, etc.) variables are scoped to a block</ListItem>
-      <ListItem>ES5 is funny in that variables are scoped to a function</ListItem>
-      <ListItem>`let` scopes to the nearest block, statement or expression</ListItem>
+      <ListItem>`.js` extension is optional</ListItem>
+      <ListItem>`./` is a UNIX path, e.g. current directory.</ListItem>
+      <ListItem>Path can be omitted if importing something from `node_modules`</ListItem>
     </List>
     <CodePane
       lang="jsx"
-      source={require("raw!./code/block-scoping-01.example")}
+      source={require("raw!./code/es6-modules-01.example")}
       margin="20px auto"
     />
-    <CodePane
-      lang="jsx"
-      source={require("raw!./code/block-scoping-02.example")}
-      margin="20px auto"
-    />
-    <Markdown textSize="0.5em">https://jsbin.com/didaqoqatu/2/edit?js,console</Markdown>
   </Slide>
 );
 

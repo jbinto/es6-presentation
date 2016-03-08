@@ -1,0 +1,17 @@
+var threeValues = [1,2,3];
+
+// ES5
+function iNeedThreeValuesES5(one, two, three) {
+  console.log(one, two, three);
+}
+
+iNeedThreeValuesES5(threeValues[0], threeValues[1], threeValues[2])
+// or, more generally:
+// iNeedThreeValuesES5.apply(null, threeValues);
+
+
+// ES6+
+const iNeedThreeValuesES6 = (one, two, three) => {
+  console.log(one, two, three);
+};
+iNeedThreeValuesES6(...threeValues);

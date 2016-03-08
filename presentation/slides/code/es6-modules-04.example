@@ -1,0 +1,4 @@
+// main.js
+import { start, stop } from './service';
+start();
+stop();

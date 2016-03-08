@@ -1,0 +1,7 @@
+var fragment = [4, 5, 6];
+
+// ES5
+var array = [1, 2, 3].concat(fragment).concat([7, 8, 9]);
+
+// ES6
+const array = [1, 2, 3, ...fragment, 7, 8, 9];

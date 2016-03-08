@@ -1,0 +1,19 @@
+function getUserNumber() { return 42; }
+
+// ES6+:
+const objES6 = {
+  [ 'user_' + getUserNumber() ]: "jbinto"
+}
+
+// ES5
+var objES5 = {};
+var key = 'user_' + getUserNumber();
+Object.defineProperty(objES5, key, {
+  configurable: false,
+  enumerable: true,
+  writable: true,
+  value: "jbinto",
+});
+
+console.log(objES5.user_42);
+console.log(objES6.user_42);

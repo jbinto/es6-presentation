@@ -1,0 +1,7 @@
+// utils/the_file_doubler_is_in.js
+const doubler = (x) => x * 2;
+export default doubler;
+
+// main.js
+import doubler from './the_file_doubler_is_in';
+console.log(doubler(5));  // 25

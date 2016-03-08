@@ -1,0 +1,12 @@
+// utils.js
+export function inverseSquareRoot() { }
+export function arcTagent() { }
+export function rSquared() { }
+
+// main1.js
+import { arcTangent } from './utils';
+const result = arcTangent(-0.1);
+
+// main2.js
+import * as MathUtils from './utils';
+const result = MathUtils.arcTangent(-0.1);

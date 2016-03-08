@@ -22,20 +22,20 @@ import {
 
 const slide = (
   <Slide transition={["zoom"]} bgColor="primary" maxHeight={1000}>
-    <Heading size={1} lineHeight={1} textColor="tertiary">
-       const
+    <Heading size={1} fit lineHeight={1} textColor="tertiary">
+      Array spread operator - as function arguments
     </Heading>
     <List>
-      <ListItem>`const` has the same scoping semantics as `let`, with one additional catch:</ListItem>
-      <ListItem>Once defined, a `const` variable cannot be reassigned to</ListItem>
+      <ListItem>Allows an array to be expanded in places where multiple arguments are expected</ListItem>
     </List>
     <CodePane
       lang="jsx"
-      source={require("raw!./code/const-01.example")}
+      source={require("raw!./code/array-spread-operator-01.example")}
       margin="20px auto"
     />
-    <Markdown>https://jsbin.com/nigowibinu/edit?js,console</Markdown>
+    <Markdown>https://jsbin.com/dabodeqopa/1/edit?js,console</Markdown>
   </Slide>
+
 );
 
 export default slide;

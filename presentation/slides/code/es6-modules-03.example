@@ -1,0 +1,9 @@
+// service.js
+const service = {
+  start:   () => { },
+  stop:    () => { },
+  restart: () => { },
+  debug:   () => { },
+};
+
+export default service;

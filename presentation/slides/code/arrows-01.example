@@ -1,0 +1,5 @@
+// ES5
+$('body').click(function() { console.log('hello world'); })
+
+// ES6+
+$('body').click(() => { console.log('hello world'); })

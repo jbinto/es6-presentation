@@ -22,19 +22,18 @@ import {
 
 const slide = (
   <Slide transition={["zoom"]} bgColor="primary" maxHeight={1000}>
-    <Heading size={1} lineHeight={1} textColor="tertiary">
-       const
+    <Heading size={1} fit lineHeight={1} textColor="tertiary">
+       Arrow functions - expressions
     </Heading>
     <List>
-      <ListItem>`const` has the same scoping semantics as `let`, with one additional catch:</ListItem>
-      <ListItem>Once defined, a `const` variable cannot be reassigned to</ListItem>
+      <ListItem>Similar to `lambda` expressions in Ruby</ListItem>
+      <ListItem>No curly braces, implicit return</ListItem>
     </List>
     <CodePane
       lang="jsx"
-      source={require("raw!./code/const-01.example")}
+      source={require("raw!./code/arrows-02.example")}
       margin="20px auto"
     />
-    <Markdown>https://jsbin.com/nigowibinu/edit?js,console</Markdown>
   </Slide>
 );
 

@@ -1,0 +1,12 @@
+function getMinAndMax() {
+  return [5, 2389];
+}
+
+// equivalent to:
+// const temp = getMinAndMax();
+// const min = temp[0];
+// const max = temp[1];
+const [min, max] = getMinAndMax();
+
+console.log(min); // 5
+console.log(max); // 2389

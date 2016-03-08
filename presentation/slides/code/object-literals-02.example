@@ -1,0 +1,17 @@
+// ES5:
+var user = "abc";
+var pass = "def";
+
+var userInfo = {
+  user: user,
+  password: pass
+}
+
+// ES6+:
+const user = "abc";
+const pass = "def";
+
+const userInfo = {
+  user,     // infers the key name from the variable name
+  password: pass   // be explicit when you want different names
+};

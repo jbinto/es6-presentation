@@ -1,0 +1,19 @@
+const defaultUserAttributes = {
+  isNewUser: true,
+  hasSentWelcomeLetter: false,
+  logins: 0,
+  trialDaysRemaining: 30,
+};
+
+const user = {
+  username: 'new_user',
+  email: 'newuser@example.org',
+  logins: 15
+};
+
+const userProfile = {
+  ...defaultUserAttributes,
+  ...user,
+};
+
+console.log(userProfile);
