@@ -46,16 +46,65 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#090A3C",
+  primary: "#DFDFF7",
   secondary: "#7F80B2",
-  tertiary: "#1A1C5A",
+  tertiary: "#1A1C5A"
 });
+
+const slides = [
+  require("./slides/001.md"),
+  require("./slides/002.md"),
+  require("./slides/003.jsx"),
+
+//   `# ES6? ES2015? ES2016? TC39? WTF?
+//
+// * ECMAScript a.k.a. JavaScript hasn't been updated since 2011
+// * ES6 was a big push to get JS modernized, and was a lot to chew at once
+// * ES6 has 12 "large features"\*, and dozens of more medium/minor features
+// * Renamed to ES2015, and subsequent versions will be ES201[6789]
+//
+// \* (modules, spread operator, object literal extensions, for..of loops, template literals, arrow functions, class, generators, typed arrays, Promise, Symbol)
+//   `,
+
+  `# Can I use any of this stuff today?
+
+* https://kangax.github.io/compat-table/es6/
+  `,
+
+  `# Transpilation and Babel
+
+* transpile (n): word invented by JavaScript thought leaders; meaning compile
+* Browser support is all over the map for most of ES2015, thus the need for a build step
+* Not all features can be transpiled. Some require browser engine changes\*
+
+\* (proxies, tail call optimization, subclassing certain built-ins)
+
+* Some features require runtime support via \`babel-polyfill\`
+  `
+];
 
 export default class Presentation extends React.Component {
   render() {
+
     return (
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+        {slides.map((slide) =>
+          <Slide transition={["zoom"]} bgColor="primary">
+            { typeof slide === "string"
+                ? <Markdown textColor="secondary">{slide}</Markdown>
+                : slide
+            }
+          </Slide>
+        )}
+        </Deck>
+      </Spectacle>
+    );
+
+    const jsx = (
+      <Spectacle theme={theme}>
+        <Deck transition={["zoom", "slide"]} transitionDuration={500}>
+
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={1} fit caps lineHeight={1} textColor="secondary">
               ES6? ES2015? ES2016? TC39? WTF?
@@ -67,7 +116,22 @@ export default class Presentation extends React.Component {
               <ListItem>Renamed to ES2015, and subsequent versions will be ES201[6789]</ListItem>
             </List>
             <Text textSize="0.75em" margin="20px 0px 0px" textColor="tertiary">* (modules, spread operator, object literal extensions, for..of loops, template literals, arrow functions, class, generators, typed arrays, Promise, Symbol)</Text>
-          </Slide>  
+          </Slide>
+
+
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+              ES6? ES2015? ES2016? TC39? WTF?
+            </Heading>
+            <List textColor="secondary">
+              <ListItem>ECMAScript a.k.a. JavaScript hasn't been updated since 2011</ListItem>
+              <ListItem>ES6 was a big push to get JS modernized, and was a lot to chew at once</ListItem>
+              <ListItem>ES6 has 12 "large features"*, and dozens of more medium/minor features</ListItem>
+              <ListItem>Renamed to ES2015, and subsequent versions will be ES201[6789]</ListItem>
+            </List>
+            <Text textSize="0.75em" margin="20px 0px 0px" textColor="tertiary">* (modules, spread operator, object literal extensions, for..of loops, template literals, arrow functions, class, generators, typed arrays, Promise, Symbol)</Text>
+          </Slide>
+
           <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={1} fit caps>
               A ReactJS Presentation Library
