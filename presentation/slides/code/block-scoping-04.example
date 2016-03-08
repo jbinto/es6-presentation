@@ -1,0 +1,7 @@
+for (var i = 1; i <= 5; i++) {
+  let j = i;
+  $('#div' + i).click(function anon() {
+    alert(j);  // this will alert 1, 2, 3, 4 or 5
+    // now, each `anon` function binds to a different `j` each time.
+  });
+}

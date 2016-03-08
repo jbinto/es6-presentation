@@ -1,0 +1,2 @@
+const MEANING_OF_LIFE = 42;
+MEANING_OF_LIFE = "poutine";  // "MEANING_OF_LIFE" is read-only

@@ -1,0 +1,5 @@
+// ES6+
+
+var name = "Jesse";
+// use backticks (``) and dollar-curly-brace ${} for interpolation
+console.log(`Hi ${name}, it is currently ${Date.now()}`);

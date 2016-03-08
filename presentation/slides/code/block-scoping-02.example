@@ -1,0 +1,9 @@
+// ES6+
+function doSomething(wasError) {
+  console.log(errorMessage); // ReferenceError: errorMessage is not defined
+
+  if (wasError) {
+    let errorMessage = "Something broke";
+  }
+  console.log(errorMessage); // ReferenceError: errorMessage is not defined
+}

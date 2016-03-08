@@ -1,0 +1,11 @@
+const result = {
+  error: false,
+  payload: 24980
+}
+
+// const prevents you from doing this...
+result = { error: true, payload: 0 };  // "result" is read-only
+
+// but you CAN do this...
+result.error = true;
+result.payload = 0;

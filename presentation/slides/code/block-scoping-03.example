@@ -1,0 +1,8 @@
+for (var i = 1; i <= 5; i++) {
+  $('#div' + i).click(function anon() {
+    alert(i);  // this will always alert(6)
+
+    // `anon` is declared 5 times, but each time it runs, the
+    // variable `i` has already been set to 6.
+  });
+}

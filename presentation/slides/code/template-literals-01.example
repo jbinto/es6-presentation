@@ -1,0 +1,4 @@
+// ES5
+
+var name = "Jesse";
+console.log('Hi ' + name + ', it is currently ' + Date.now());
