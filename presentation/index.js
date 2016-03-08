@@ -48,7 +48,8 @@ preloader(images);
 const theme = createTheme({
   primary: "#DFDFF7",
   secondary: "#7F80B2",
-  tertiary: "#1A1C5A"
+  tertiary: "#1A1C5A",
+  quaternary: "#000000"
 });
 
 
@@ -89,9 +90,6 @@ const slides = context.keys().map(context);
 // * Some features require runtime support via \`babel-polyfill\`
 //   `
 // ];
-
-console.log(slides[0]);
-console.log(slides[2].default);
 
 export default class Presentation extends React.Component {
   render() {
