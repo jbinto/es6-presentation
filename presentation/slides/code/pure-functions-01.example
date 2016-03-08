@@ -1,0 +1,7 @@
+// pure
+const double = (x) => x * 2;
+
+// impure
+const doubleIfWednesday (x) => {
+  (new Date().getDay() == 3) ? (x * 2) : x
+}

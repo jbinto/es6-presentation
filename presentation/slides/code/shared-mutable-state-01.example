@@ -1,0 +1,3 @@
+let counter = 0; // shared state
+const decrement = () => { counter--; }
+const increment = () => { counter++; }

@@ -1,0 +1,14 @@
+const arr = [1,2,5,10,12];
+const isEven = (n) => n % 2 == 0;
+
+// non-FP, using manual iteration
+const newArr = []
+for (let i = 0; i < arr.length; i++) {
+  newArr.push(isEven(arr[i]));
+}
+console.log(newArr); // [false, true, false, true, true]
+
+
+// FP, using Array.map
+const newArrFP = arr.map(isEven);
+console.log(newArrFP); // [false, true, false, true, true]

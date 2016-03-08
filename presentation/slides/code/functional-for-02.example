@@ -1,0 +1,14 @@
+const arr = [1,2,5,10,12];
+const isEven = (n) => n % 2 == 0;
+
+// non-FP, using manual iteration
+let allAreEven = true;
+for (let i = 0; i < arr.length; i++) {
+  allAreEven = allAreEven && isEven(arr[i]);
+}
+console.log(allAreEven);  // false
+
+
+// FP, using Array.reduce
+const allAreEvenFP = arr.reduce((prev, current) => prev && isEven(current), true);
+console.log(allAreEvenFP);  // false

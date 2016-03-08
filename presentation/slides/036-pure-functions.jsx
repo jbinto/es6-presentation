@@ -26,12 +26,16 @@ const slide = (
       Side effects
     </Heading>
     <List textColor="primary">
-      <Appear><ListItem>Anything that is useful in a computer program is a <strong>side effect</strong>.</ListItem></Appear>
-      <Appear><ListItem>Writing to disk, opening a network connection, printing to screen, opening an audio device, sending an email.</ListItem></Appear>
-      <Appear><ListItem>These things are useful, but fragile!</ListItem></Appear>
-      <Appear><ListItem>Functional programming is all about separating the portions of your logic that are <strong>pure</strong> and those that contain <strong>side effects</strong>.</ListItem></Appear>
-      <Appear><ListItem>Consider unit tests: it is trivial to test the `double` function. It is much harder to test that you hit the SendGrid API and turned on an LED on a serial port.</ListItem></Appear>
+      <Appear><ListItem>A pure function is a function that takes one or more inputs, and returns a single output.</ListItem></Appear>
+      <Appear><ListItem>If you call a pure function with the same inputs, it will ALWAYS return the same output, regardless of how full your disk is, the status of your network connection, the time of day, or the tide of the moon.</ListItem></Appear>
+      <Appear><ListItem>If you call a pure function 50,000 times, it always returns the same thing.</ListItem></Appear>
+      <Appear><ListItem>A pure function has NO side effects.</ListItem></Appear>
     </List>
+    <CodePane
+      lang="jsx"
+      source={require("raw!./code/pure-functions-01.example")}
+      margin="20px auto"
+    />
   </Slide>
 
 );

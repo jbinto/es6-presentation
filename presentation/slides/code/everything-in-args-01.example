@@ -1,0 +1,2 @@
+const decrement = (n) => n-1;
+const increment = (n) => n+1;
