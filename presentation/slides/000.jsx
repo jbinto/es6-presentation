@@ -36,6 +36,9 @@ const slide = (
     <Text {...textProps}>
       March 2016
     </Text>
+    <Text {...textProps}>
+      https://jbinto.github.io/es6-presentation/
+    </Text>
   </Slide>
 );
 
