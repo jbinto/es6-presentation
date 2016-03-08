@@ -51,10 +51,17 @@ const theme = createTheme({
   tertiary: "#1A1C5A"
 });
 
-const slides = [
-  require("./slides/001.md"),
-  require("./slides/002.md"),
-  require("./slides/003.jsx"),
+
+// https://webpack.github.io/docs/context.html
+const context = require.context("./slides", false, /\.(md|jsx)$/);
+const slides = context.keys().map(context);
+
+
+//
+// const slides = [
+//   require("./slides/001.md"),
+//   require("./slides/002.md"),
+//   require("./slides/003.jsx"),
 
 //   `# ES6? ES2015? ES2016? TC39? WTF?
 //
@@ -65,23 +72,26 @@ const slides = [
 //
 // \* (modules, spread operator, object literal extensions, for..of loops, template literals, arrow functions, class, generators, typed arrays, Promise, Symbol)
 //   `,
+//
+//   `# Can I use any of this stuff today?
+//
+// * https://kangax.github.io/compat-table/es6/
+//   `,
+//
+//   `# Transpilation and Babel
+//
+// * transpile (n): word invented by JavaScript thought leaders; meaning compile
+// * Browser support is all over the map for most of ES2015, thus the need for a build step
+// * Not all features can be transpiled. Some require browser engine changes\*
+//
+// \* (proxies, tail call optimization, subclassing certain built-ins)
+//
+// * Some features require runtime support via \`babel-polyfill\`
+//   `
+// ];
 
-  `# Can I use any of this stuff today?
-
-* https://kangax.github.io/compat-table/es6/
-  `,
-
-  `# Transpilation and Babel
-
-* transpile (n): word invented by JavaScript thought leaders; meaning compile
-* Browser support is all over the map for most of ES2015, thus the need for a build step
-* Not all features can be transpiled. Some require browser engine changes\*
-
-\* (proxies, tail call optimization, subclassing certain built-ins)
-
-* Some features require runtime support via \`babel-polyfill\`
-  `
-];
+console.log(slides[0]);
+console.log(slides[2].default);
 
 export default class Presentation extends React.Component {
   render() {
@@ -90,12 +100,11 @@ export default class Presentation extends React.Component {
       <Spectacle theme={theme}>
         <Deck transition={["zoom", "slide"]} transitionDuration={500}>
         {slides.map((slide) =>
-          <Slide transition={["zoom"]} bgColor="primary">
-            { typeof slide === "string"
-                ? <Markdown textColor="secondary">{slide}</Markdown>
-                : slide
-            }
-          </Slide>
+          typeof slide === "string"
+            ? <Slide transition={["zoom"]} bgColor="primary" maxHeight={1000}>
+                <Markdown textColor="secondary">{slide}</Markdown>
+              </Slide>
+            : slide.default
         )}
         </Deck>
       </Spectacle>
